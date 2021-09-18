@@ -1,0 +1,61 @@
+@use '../../scss/colors.scss';
+@use '../../scss/typography.scss';
+
+  .subscribe-banner{
+    grid-template-columns: 650px auto;
+    align-items: center;
+    padding-top:35px;
+    padding-bottom: 40px;
+    background-color: white;
+    height: max-content;
+    margin: 0px 15px;
+  
+    h1{
+      font-family: typography.$family-font-basic;      height:max-content;
+      margin-right: 13px;
+      margin-bottom: 0 7px;
+    }
+  }
+
+
+  
+@media (max-width:1279px) {
+  .subscribe-banner{
+    display: grid;
+    grid-template-columns: auto;
+
+    h1{
+      margin-bottom: 18px;
+    }
+}
+
+.subscribe-input{
+  width:750px;
+}
+}
+
+
+@media (max-width:1159px){
+  
+  .subscribe-banner{
+    width:82%;
+  }
+  .subscribe-input{
+    width:750px;
+  }
+
+  
+}
+
+@media (max-width:931px){
+  .subscribe-banner{
+    width:80%;
+  }
+  
+  .home-heading-class{
+    // margin: 26px auto;
+  }
+  .subscribe-input{
+    width:100%;
+  }
+}
