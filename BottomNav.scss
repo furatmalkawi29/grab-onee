@@ -1,0 +1,86 @@
+@use '../../scss/colors.scss';
+@use '../../scss/typography.scss';
+
+
+.bottom-nav{
+  display: flex;
+align-items: center;
+justify-content: space-around;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  width: 100%;
+background-color: white;
+height: 55px;
+font-family: typography.$family-font-basic;
+border-top: 1px solid rgb(233, 233, 233);  
+color: colors.$secondary-color;
+
+p{
+  font-size: 13px;
+  font-weight: 500;
+}
+
+div{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+:first-child{
+  padding-bottom: 5px;
+  color: rgb(83, 83, 83);
+}
+
+div{
+  display: grid;
+  grid-template-columns: 5px 5px;
+  font-size: 9px;
+  :nth-child(2),:nth-child(4){
+  stroke-width: 2;
+  margin-left: 5px;
+}
+:nth-child(1){
+  padding-bottom: 0px;
+}
+
+*{
+  stroke-width: 3;
+}
+}
+}
+}
+
+.search-icon{
+  font-size: 22px;
+}
+
+.cart{
+  font-size: 22px;
+}
+
+.home{
+  font-size: 24px;
+}
+
+.account{
+  font-size: 25px;
+  stroke-width: .2;
+}
+
+.bottom-nav div:hover{
+  cursor: pointer;
+  color:colors.$primary-color;
+}
+
+@media (min-width:1088px){
+  .bottom-nav{
+    display: none;
+  }
+}
+
+@media (max-width:1088px){
+.copyright{
+  padding-bottom: 68px;
+  height: 70px;
+  }
+}

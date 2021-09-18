@@ -1,0 +1,133 @@
+@use '../../scss/colors.scss';
+@use '../../scss/typography.scss';
+
+section{
+  margin-top: 32px;
+  height:fit-content;
+}
+
+.cards-container{
+  display: grid;
+  gap: 10px 15px;
+  grid-template-columns: repeat(4,auto);
+  margin:15px;
+}
+
+.section-header{
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+
+  h1{
+    font-size: 30px;
+    color:colors.$secondary-color;
+    line-height: 21px;
+    font-family: typography.$family-font-basic;
+    font-weight: 700;
+    margin:15px 0px;
+    line-height: 30px;
+  }
+  button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width:108px;
+    border-radius: 5px;
+    margin: auto 0;
+    border: none;
+    background-color: colors.$primary-color;
+    color:white;
+    cursor: pointer;
+    margin-left: 2%;
+    
+  }
+
+  .right-arrow{
+    margin-left:5px;
+    stroke-width:1.5em;
+  }
+
+  button:hover{
+    background-color: colors.$light-blue;
+  }
+  
+}
+
+
+
+@media screen and (min-width:1159px) {
+
+  .top-section{
+    .product-card{
+      height: 75%;
+    }
+  }
+
+  .subscribe-banner h1{
+    margin-bottom: 12px;
+  }
+
+  .cards-container {
+    display: grid;
+    gap: 10px 15px;
+    grid-template-columns: repeat(4, 25%);
+    width: 93.6%;
+    margin-left: 1.4%;
+}
+
+}
+
+
+@media screen and (max-width:1247px) {
+  .cards-container{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+  }
+
+  .product-card{
+    height: 90%;
+  }
+}
+
+@media screen and (max-width:1159px) and (min-width:985px){
+  .cards-container{
+    width: 925px;
+    margin: 0 auto;
+  }
+
+  .section-header{
+    h1{
+      margin-left: 90px;
+    }
+  }
+
+}
+
+@media screen and (max-width:849px) {
+.product-card{
+  height: 100%;
+}
+.cards-container{
+  grid-gap: 24px 15px
+}
+}
+
+
+@media screen and (max-width:649px) {
+  .cards-container{
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+  }
+
+  .product-card{
+    height: 80%;
+  }
+
+  .cards-container{
+    grid-gap: 0px 15px
+  }
+}
+ 
